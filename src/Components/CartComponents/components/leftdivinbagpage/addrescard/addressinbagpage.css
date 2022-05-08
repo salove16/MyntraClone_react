@@ -1,0 +1,38 @@
+
+
+.pink {
+    color: rgb(255, 63, 108);
+  }
+
+  #adressdiv {
+    display: flex;
+  }
+  
+  #adressdiv {
+    border: 1px solid lightgray;
+    border-radius: 5px;   
+    justify-content: space-between;
+    padding: 1%;
+    margin-top:2%;
+   
+  }
+
+  #add2button {
+    height: 50%;
+    margin-top: 15%;
+    background-color: white;
+    border: 1px solid rgb(255, 63, 108);
+    border-radius: 5px;
+    color: rgb(255, 63, 108);
+    font-weight: bold;
+  }
+
+  #address2 {
+    flex: 2;
+  }
+  #address1 {
+    /* display:flex;
+      flex-wrap: wrap; */
+    flex: 7;
+    font-size: 18px;
+  }

@@ -1,0 +1,14 @@
+
+#offers {
+    border: 1px solid lightgray;
+    padding: 1%;
+    margin: 1%;
+    text-align: left;
+}
+
+#offerslist > li {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18.5714px;
+    color: rgb(40, 44, 63);
+}

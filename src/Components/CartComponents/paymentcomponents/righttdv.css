@@ -1,0 +1,59 @@
+*{
+  font-size: small !important;
+}
+
+
+#subpricedetails1,
+#tamount {
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+}
+#subpricedetails1 > div,
+#tamount > div {
+  padding: 1.8%;
+}
+
+.green1 {
+    color: green;
+  }
+
+  #myBtn1 {
+    border: none;
+    background-color: white;
+    color: rgb(255, 63, 108);
+  }
+
+  #promo12 {
+    width: 90%;
+    padding: 2%;
+  }
+
+  #popupapply {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #popupapply > div ~ div {
+    text-align: center;
+  }
+
+  .pink {
+    color: rgb(255, 63, 108);
+  }
+
+  .black {
+    color: black;
+  }
+
+  .strikedoff {
+    text-decoration: line-through;
+  }
+
+  #placeorder1 {
+    width: 100%;
+    padding: 2%;
+    margin-top: 1.9%;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(255, 63, 108);
+    color: white;
+  }

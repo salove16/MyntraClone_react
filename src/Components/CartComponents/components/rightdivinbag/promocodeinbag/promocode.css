@@ -1,0 +1,12 @@
+#myBtn {
+    display: flex;
+    border: 1px solid rgb(255, 63, 108);
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(255, 63, 108);
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    align-items: center;
+    margin-top: 25%;    
+  }

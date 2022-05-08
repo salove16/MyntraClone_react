@@ -1,0 +1,289 @@
+#payment {
+    display: flex;
+  }
+  #container,
+  #footer {
+    width: 75%;
+    padding: 2%;
+    margin: auto;
+  }
+  #left {
+    flex: 4;
+    padding: 2%;
+    /* border:1px solid black;     */
+  }
+  #right {
+    flex: 2.5;
+    padding: 2%;
+    border-left: 1px solid rgb(228, 225, 225);
+    margin-left: 1%;
+    /* border:1px solid green;        */
+  }
+  #bankoffer {
+    width: 600px;
+    height: 110px;
+    /* margin-left: 300px; */
+    border: 1px solid rgb(228, 225, 225);
+    border-radius: 5px;
+  }
+  #banklogo {
+    display: flex;
+  }
+  #logoimage {
+    height: 25px;
+    width: 25px;
+    margin-left: 20px;
+    margin-top: 12px;
+  }
+  #bankh {
+    margin-left: 15px;
+    color: #424553;
+    line-height: -0.2cm;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  }
+  #list {
+    color: #707385;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-left: 20px;
+    font-weight: 200;
+  }
+  #showmore {
+    margin-top: 8px;
+  }
+  #ahref {
+    color: #ff3f6c;
+    font-size: 14px;
+    margin-left: 30px;
+    font-weight: 600;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+  }
+  #pmode {
+    color: #424553;
+    /* margin-left: 320px; */
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  #cardpay {
+    display: flex;
+    width: 600px;
+    height: 400px;
+    /* margin-left: 300px; */
+    border: 1px solid rgb(228, 225, 225);
+    border-radius: 5px;
+  }
+  #rightpay {
+    display: flex;
+    width: 220px;
+    height: 70px;
+    border: 1px solid rgb(228, 225, 225);
+    background-color: rgb(236, 235, 235);
+    align-items: center;
+  }
+  #cardimage {
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+  }
+  #leftpay {
+    width: 380px;
+    align-items: center;
+  }
+  #inputcard {
+    border: 1px solid rgb(228, 225, 225);
+    color: rgb(228, 225, 225);
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    margin-left: 20px;
+  }
+  .inputtext {
+    font-size: 12px;
+    color: rgb(190, 188, 188);
+  }
+  .margin {
+    margin-top: 10px;
+  }
+  #inputname {
+    border: 1px solid rgb(228, 225, 225);
+    color: rgb(228, 225, 225);
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  #datecv {
+    display: flex;
+  }
+  #inputdate {
+    width: 160px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border: 1px solid rgb(228, 225, 225);
+    color: rgb(228, 225, 225);
+  }
+  #inputcvv {
+    width: 100px;
+    margin-left: 18px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+    border: 1px solid rgb(228, 225, 225);
+    color: rgb(228, 225, 225);
+  }
+  #checkbox {
+    padding: 8px;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  #paybtn {
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 18px;
+    width: 320px;
+  }
+  #priceh {
+    color: #535766;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    margin-left: 20px;
+  }
+  #mrpdiv {
+    display: flex;
+    margin-left: 20px;
+    margin-top: -45px;
+  }
+  #mrptext {
+    font-size: 13px;
+    color: #424553;
+    font-weight: 400;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 200px;
+  }
+  #mrpprice {
+    font-size: 13px;
+    color: #424553;
+    font-weight: 400;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  #disprice {
+    font-size: 13px;
+    color: #03a685;
+    font-weight: 400;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  #feeprice {
+    text-decoration: line-through;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-left: -20px;
+  }
+  #freefee {
+    color: #03a685;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-left: 4px;
+  }
+  #line {
+    width: 250px;
+    margin-top: -20px;
+    position: absolute;
+    margin-left: 20px;
+  }
+  #totaltext {
+    color: #3e4152;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 200px;
+  }
+  #totalprice {
+    color: #3e4152;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  #couponid {
+    display: flex;
+    width: 600px;
+    height: 60px;
+    /* margin-left: 300px; */
+    margin-top: 10px;
+    border: 1px solid rgb(228, 225, 225);
+    align-items: center;
+  }
+  #couponhref {
+    color: #ff3f6c;
+    font-size: 14px;
+    margin-left: 270px;
+    font-weight: 600;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+  }
+  #rupee {
+    margin-top: 28px;
+  }
+  #rupee1 {
+    margin-right: 18px;
+    margin-top: 28px;
+  }
+  #rupee3 {
+    margin-top: 35px;
+  }
+  #border {
+    border-left: 1px solid rgb(228, 225, 225);
+    height: 800px;
+  }
+  #pd2,
+  #tamount {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+  .pink {
+    color: rgb(255, 63, 108);
+  }
+  .green1 {
+    color: green;
+  }
+  .strikedoff {
+    text-decoration: line-through;
+  }
+  .black {
+    color: black;
+  }
+  #footer {
+    padding-top: 1%;
+  }
+  #footer > img {
+    border: 1px solid black;
+    width: 98%;
+    margin-left: 1%;
+  }
+  #leftpay {
+    color: black;
+  }
+  #input {
+    color: black;
+  }
+  .color3 {
+    color: green;
+    text-decoration: underline;
+  }
+  input {
+    color: black !important;
+  }
