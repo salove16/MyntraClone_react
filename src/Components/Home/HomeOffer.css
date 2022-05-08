@@ -1,0 +1,41 @@
+.offer1{
+    display: flex;
+    width: 100%;
+    
+}
+.offer1>img{
+width:50% ;
+}
+
+
+.offerdiv{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.dealdiv{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.offerdiv:hover{
+border: 1px solid rgb(207, 200, 200);
+background-color: rgb(145, 210, 247);
+}
+.offerimg{
+    width: 100%;
+    
+}
+.dealimg{
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .offer1{
+        display:inline;
+        width: 100%;
+    }
+    .offer1>img{
+     width:100% ;
+    }
+  }
