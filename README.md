@@ -33,9 +33,8 @@ _To start with the Project run the following command in terminal
 - #### Framework
   - `Node.Js`
 - #### Libraries
-  - `Express`
-  - `mongoose`
-  - `react`
+  - `Firebase`
+  - `ReactJS`
 ---
 
 ### _Following are the Screenshots for the reference_
