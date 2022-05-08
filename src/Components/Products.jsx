@@ -40,6 +40,7 @@ const Products = ({ data }) => {
 
    const Fetchdata = async () => {
       setInfo([]);
+      setLoading(false);
       db.collection(data)
          .get()
          .then((querySnapshot) => {
