@@ -9,15 +9,15 @@ import { ContextProvider } from "./Components/CartComponents/contexts/cartcontex
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <React.StrictMode>
-    <BrowserRouter>
-    <ContextProvider>
-      {/* <CartContextProvider> */}
-        <AuthContextProvider>
-          <App />
-        </AuthContextProvider>
-      {/* </CartContextProvider> */}
-      </ContextProvider>
-    </BrowserRouter>
-  // </React.StrictMode>
+   <React.StrictMode>
+      <BrowserRouter>
+         <ContextProvider>
+            {/* <CartContextProvider> */}
+            <AuthContextProvider>
+               <App />
+            </AuthContextProvider>
+            {/* </CartContextProvider> */}
+         </ContextProvider>
+      </BrowserRouter>
+   </React.StrictMode>
 );
