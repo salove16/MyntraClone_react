@@ -1,36 +1,59 @@
-import React from 'react';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
-import "./HomeSlide.css"
+
+ import "./HomeSlide.css"
 
 import img1 from "./Home_images/slideImg/slide1.webp";
 import img2 from "./Home_images/slideImg/slide2.jpg";
 import img3 from "./Home_images/slideImg/slide3.webp";
 import img4 from "./Home_images/slideImg/slide4.webp";
 import img5 from "./Home_images/slideImg/slide5.webp";
-const items = [
-    
-    <img className="item" src={img1} data-value="1"></img>,
-    <img className="item" src={img2} data-value="2"></img>,
-    <img className="item" src={img3} data-value="3"></img>,
-    <img className="item" src={img4} data-value="4"></img>,
-    <img className="item" src={img5} data-value="5"></img>,
-];
+import { Carousel} from "react-bootstrap"
 
-export const Carousel = () => (
-    <div className='sliderimgdiv'>
-      <AliceCarousel 
-        autoPlay
-       
-        autoPlayStrategy="none"
-        autoPlayInterval={2000}
-        animationDuration={1000}
-        animationType="fadeout"
-        infinite
-        touchTracking={false}
-        disableDotsControls
-        disableButtonsControls
-        items={items}
+export const Carousel1=()=>{
+   return (
+       <div className="sliderimgdiv">
+
+<Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={img1}
+      alt="First slide"
     />
-    </div>
-);
+ </Carousel.Item>
+
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={img2}
+      alt="Second slide"
+    />
+ </Carousel.Item>
+
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={img3}
+      alt="Third slide"
+    />
+ </Carousel.Item>
+
+ <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={img4}
+      alt="forth slide"
+    />
+ </Carousel.Item>
+
+ <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={img5}
+      alt="fifth slide"
+    />
+ </Carousel.Item>
+
+</Carousel>
+       </div>
+   ) 
+}

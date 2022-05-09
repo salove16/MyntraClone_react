@@ -82,8 +82,8 @@ const Products = ({ data }) => {
                fontSize: "16px",
             }}
          >
-            <label style={{ marginRight: "4px" }}>Sort by:</label>
-            <select onChange={handleSort} className="sortBy">
+            <label style={{ marginRight: "4px",background:"rgb(244,28,178)",padding:"1%",borderRadius:"5%",color:"white",fontWeight:"600" }}>Sort by:</label>
+            <select onChange={handleSort} className="sortBy"  style={{ marginRight: "4px",background:"rgb(238,236,234)",padding:"1%",borderRadius:"5%",color:"grey",fontWeight:"600" }}>
                <option name="">Price</option>
                <option name="high2low">Price: High To Low</option>
                <option name="low2high">Price: Low To High</option>

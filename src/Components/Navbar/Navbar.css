@@ -180,7 +180,7 @@ for mini nav
   }
 
 
-  .down>.flex>.a2> {
+  .down>.flex>.a2{
     width: 22%;
     height: 12cm;
     background-color: rgb(245, 245, 246);
@@ -276,7 +276,17 @@ pointer-events: auto;
         margin-left: 0.3%;
       } */
 
+.rightLink{
+  font-weight: bold ;
+  color: #282C3F !important;
+  text-decoration: none;
+ 
+  
+}
 
+.rightLink:hover{
+color: crimson !important;
+}
 
 
 

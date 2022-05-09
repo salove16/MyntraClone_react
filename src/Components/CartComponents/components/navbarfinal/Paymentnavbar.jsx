@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { AppBar, Toolbar} from "@mui/material";
 
-
+import "./test.css"
 
 function LinkTab(props) {
 
@@ -63,11 +63,12 @@ export const Navbarpayment=()=>{
                     <LinkTab label="PAYMENT" href="/payment" /> */}
 
 
-                      <NavLink
+                      <NavLink 
                       to="/bag"
-                      style={ {textDecoration:"none",color:"black",fontWeight:"700",paddingTop:"1%"
+                       style={ {textDecoration:"none",color:"black",fontWeight:"700",paddingTop:"1%"
                         
                       }}
+                      
                       >Bag----</NavLink>
                       <NavLink
                       to="/address"
@@ -75,7 +76,7 @@ export const Navbarpayment=()=>{
                         
                       }}>Address----</NavLink>
                       <NavLink
-                      to="/payment"
+                      to="/payment" 
                       style={ {textDecoration:"none",color:"black",fontWeight:"700",paddingTop:"1%"
                         
                       }}>Payment</NavLink>
