@@ -73,7 +73,7 @@ const Products = ({ data }) => {
          const sorted = [...filteredData].sort((a, b) => b.price - a.price);
          setFilteredData(sorted);
       } else if (by === "Rating: High To Low") {
-         const sorted = [...infilteredDatao].sort(
+         const sorted = [...filteredDatao].sort(
             (a, b) => b.rating.length - a.rating.length
          );
          setFilteredData(sorted);
@@ -94,8 +94,30 @@ const Products = ({ data }) => {
                fontSize: "16px",
             }}
          >
-            <label style={{ marginRight: "4px" }}>Sort by:</label>
-            <select onChange={handleSort} className="sortBy">
+            <label
+               style={{
+                  marginRight: "4px",
+                  background: "rgb(244,28,178)",
+                  padding: "1%",
+                  borderRadius: "5%",
+                  color: "white",
+                  fontWeight: "600",
+               }}
+            >
+               Sort by:
+            </label>
+            <select
+               onChange={handleSort}
+               className="sortBy"
+               style={{
+                  marginRight: "4px",
+                  background: "rgb(238,236,234)",
+                  padding: "1%",
+                  borderRadius: "5%",
+                  color: "grey",
+                  fontWeight: "600",
+               }}
+            >
                <option name="">Price</option>
                <option name="high2low">Price: High To Low</option>
                <option name="low2high">Price: Low To High</option>
@@ -113,7 +135,7 @@ const Products = ({ data }) => {
                      textAlign: "center",
                      width: "400px",
                      fontSize: "15rem",
-                     margin: "auto"
+                     margin: "auto",
                   }}
                />
             ) : (
@@ -259,7 +281,6 @@ const Products = ({ data }) => {
                            </Card>
                         );
                      })}
-                     
                   </div>
                </>
             )}

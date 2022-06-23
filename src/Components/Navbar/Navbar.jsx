@@ -193,14 +193,14 @@ export const Navbar = () => {
                   alt=""
                />
                <br></br>
-               <span>
+               <span >
                   {" "}
                   {currentUser ? (
-                     <Link onClick={logout} to={"/"}>
+                     <Link onClick={logout} to={"/"} className="rightLink" >
                       Logout
                      </Link>
                   ) : (
-                     <Link to={"/login"}>Login</Link>
+                     <Link to={"/login"}  className="rightLink">Login</Link>
                   )}
                </span>
             </p>
@@ -213,7 +213,7 @@ export const Navbar = () => {
                />
                <br></br>
                <span>
-                  <Link to={"/wishlist"}>Wishlist</Link>
+                  <Link to={"/wishlist"} className="rightLink">Wishlist</Link>
                </span>
             </p>
 
@@ -235,7 +235,7 @@ export const Navbar = () => {
                      alt=""
                   />
                   <br></br>
-                  <span>Bag</span>
+                  <span className="rightLink">Bag</span>
                </p>
             </Link>
          </Div>

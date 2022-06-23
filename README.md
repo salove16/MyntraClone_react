@@ -73,14 +73,11 @@ _To start with the Project run the following command in terminal
 
 ---
 
-### Medium Link
-
-
-
 ### Google Drive Link
-
+https://drive.google.com/file/d/1Am2vHnifvFzCKBEl6qazvqJ-wBV67sdf/view?usp=sharing
 
 
 
 ### Netlify Link
+https://myntra1.netlify.app
 

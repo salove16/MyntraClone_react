@@ -109,8 +109,105 @@ for mini nav
         transition: all .2s ease-out;
       } */
 
-.ddown > .flex {
-   display: flex;
+   
+  
+  .down>.flex>.a1 {
+    width: 22%;
+    height: 12cm;
+
+
+
+
+   
+  }
+  .down>.flex>.a1> li {
+    list-style: none;
+    padding: 1.5px;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+
+
+
+ 
+
+  .a1>ul > :nth-child(1) {
+    font-size: 14px;
+    font-weight: 700;
+    /* color: #ee6779; */
+    /* background-color: black; */
+    padding: 12px 0px 10px 0px;
+    /* margin-bottom: -15px; */
+  }
+
+  .k>ul>:nth-child(1)
+  {
+    color:#f26a10;
+    font-weight: bold;
+  }
+  
+
+
+  .down>.flex>.a1>.ddown .nextul {
+    border-top: solid 2px rgb(223, 235, 223);
+    margin-top: 10px;
+    /* background-color: #484849; */
+  }
+
+
+  .down>.flex>.a2{
+    width: 22%;
+    height: 12cm;
+    background-color: rgb(245, 245, 246);
+
+    
+   
+
+  
+  }
+
+
+  .down>.flex>.a2>li {
+    list-style: none;
+    padding: 1.5px;
+    font-weight: 400;
+  }
+
+
+
+
+  .a2> ul > :nth-child(1) {
+    font-size: 16px;
+    font-weight: 700;
+    /* color: #f28090; */
+    /* background-color: black; */
+    padding: 12px 0px 10px 0px;
+    /* margin-bottom: 15px; */
+  }
+
+
+  .down>.flex>.a2> .ddown .nextul {
+    border-top: solid 2px rgb(223, 235, 223);
+    margin-top: 10px;
+    /* background-color: #484849; */
+  }
+  .a1{
+    width: 30%;
+  }
+  .a2{
+    width: 30%;
+  }
+
+  li{
+      cursor: pointer;
+  }
+  li:hover{
+      font-weight: bold;
+  }
+  ul {
+    list-style-type: none;
+   
 }
 
 .down > .flex > .a1 {
@@ -222,3 +319,26 @@ ul {
         margin-top: 0%;
         margin-left: 0.3%;
       } */
+
+.rightLink{
+  font-weight: bold ;
+  color: #282C3F !important;
+  text-decoration: none;
+ 
+  
+}
+
+.rightLink:hover{
+color: crimson !important;
+}
+
+
+
+
+
+ 
+
+
+
+
+  
