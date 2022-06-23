@@ -15,10 +15,11 @@ const Filters = ({brandsBar, handleFilter}) => {
                   width: "100%",
                   maxWidth: 460,
                   bgcolor: "background.paper",
+                  padding: "10%"
                }}
             >
                {/* <Divider /> */}
-               <h2>Brands</h2>
+               <h2><b>Brands</b></h2>
 
                {brandsBar.map((value, i) => {
                   const labelId = `checkbox-list-label-${value}`;
