@@ -1,13 +1,6 @@
 import { Container, PaginationItem } from "@mui/material";
 import React, { useEffect, useState, useContext } from "react";
 
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Checkbox from "@mui/material/Checkbox";
-import Divider from "@mui/material/Divider";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -15,32 +8,35 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CircularProgress from "@mui/material/CircularProgress";
 
 import { db } from "../firebase";
 
 import "../App.css";
 import { ShoppingBag } from "@mui/icons-material";
-
-import Pagination from "@mui/material/Pagination";
 import { Cartcontext } from "./CartComponents/contexts/cartcontext";
+import Filters from "./Filters";
 
 const Products = ({ data }) => {
    const [info, setInfo] = useState([]);
    const [loading, setLoading] = useState(true);
-   const [brands, setBrands] = useState(new Set());
    const { updatecart } = useContext(Cartcontext);
-   //   console.log(cart);
+   const [filteredData, setFilteredData] = useState([]);
+   const [brandsBar, setBrandsBar] = useState([]);
 
    useEffect(() => {
       Fetchdata();
    }, [data]);
 
+   useEffect(() => {
+      setBrands();
+   }, [loading]);
+
    const Fetchdata = async () => {
       setInfo([]);
-      setLoading(false);
+      setLoading(true);
+      setBrandsBar([]);
+      setFilteredData([]);
       db.collection(data)
          .get()
          .then((querySnapshot) => {
@@ -48,28 +44,44 @@ const Products = ({ data }) => {
                let data = element.data();
                setInfo((arr) => [...arr, data]);
                setLoading(false);
+               setFilteredData((arr) => [...arr, data]);
             });
          });
+      setBrands();
+   };
+
+   const setBrands = () => {
+      let arr = [];
+      info.map((e) => {
+         arr.push(e.brand);
+      });
+      let set = [...new Set(arr)];
+      setBrandsBar(set);
+   };
+
+   const handleFilter = (e) => {
+      let filtered = info.filter((item) => item.brand === e);
+      setFilteredData(filtered);
    };
 
    const handleSort = () => {
       const by = document.querySelector(".sortBy").value;
       if (by === "Price: Low To High") {
-         const sorted = [...info].sort((a, b) => a.price - b.price);
-         setInfo(sorted);
+         const sorted = [...filteredData].sort((a, b) => a.price - b.price);
+         setFilteredData(sorted);
       } else if (by === "Price: High To Low") {
-         const sorted = [...info].sort((a, b) => b.price - a.price);
-         setInfo(sorted);
+         const sorted = [...filteredData].sort((a, b) => b.price - a.price);
+         setFilteredData(sorted);
       } else if (by === "Rating: High To Low") {
-         const sorted = [...info].sort(
+         const sorted = [...infilteredDatao].sort(
             (a, b) => b.rating.length - a.rating.length
          );
-         setInfo(sorted);
+         setFilteredData(sorted);
       } else if (by === "Rating: Low To High") {
-         const sorted = [...info].sort(
+         const sorted = [...filteredData].sort(
             (a, b) => a.rating.length - b.rating.length
          );
-         setInfo(sorted);
+         setFilteredData(sorted);
       }
    };
 
@@ -101,60 +113,18 @@ const Products = ({ data }) => {
                      textAlign: "center",
                      width: "400px",
                      fontSize: "15rem",
+                     margin: "auto"
                   }}
                />
             ) : (
                <>
-                  {/* <Sorting /> */}
+                  {/* <Filtering /> */}
 
-                  {/* <div className="sidebar" style={{ flexBasis: "16rem" }}>
-                     <List
-                        sx={{
-                           width: "100%",
-                           maxWidth: 360,
-                           bgcolor: "background.paper",
-                        }}
-                     >
-                        <Divider />
-                        <h2>Brands</h2>
-
-                        {info.map((value) => {
-                           const labelId = `checkbox-list-label-${value.brand}`;
-
-                           return (
-                              <ListItem key={value.brand} disablePadding>
-                                 <ListItemButton
-                                    role={undefined}
-                                    onClick={handleToggle(value.brand)}
-                                    dense
-                                 >
-                                    <ListItemIcon style={{ minWidth: 0 }}>
-                                       <Checkbox
-                                          edge="start"
-                                          checked={
-                                             checked.indexOf(value.brand) !== -1
-                                          }
-                                          tabIndex={-1}
-                                          disableRipple
-                                          inputProps={{
-                                             "aria-labelledby": labelId,
-                                          }}
-                                       />
-                                    </ListItemIcon>
-                                    <ListItemText
-                                       id={labelId}
-                                       primary={`${value.brand}`}
-                                    />
-                                 </ListItemButton>
-                              </ListItem>
-                           );
-                        })}
-                     </List>
-                  </div> */}
+                  <Filters brandsBar={brandsBar} handleFilter={handleFilter} />
                   {/* Right side container */}
 
                   <div className="productContainer">
-                     {info.map((e) => {
+                     {filteredData.map((e, i) => {
                         return (
                            <Card sx={{ maxWidth: 275 }}>
                               <CardMedia
@@ -289,21 +259,7 @@ const Products = ({ data }) => {
                            </Card>
                         );
                      })}
-                     <Pagination
-                        count={(info.length / 10).toFixed(0)}
-                        // renderItem={(item) => (
-                        //   <PaginationItem
-                        //     components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
-                        //     {...info}
-                        //   />
-                        // )}
-                        style={{
-                           padding: 20,
-                           width: "100%",
-                           display: "flex",
-                           justifyContent: "center",
-                        }}
-                     />
+                     
                   </div>
                </>
             )}

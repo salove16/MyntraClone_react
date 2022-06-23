@@ -6,7 +6,7 @@ import img4 from "./Home_images/offerImages/o4.webp"
 import offerimg from "./Home_images/top1.jpeg"
 import dealimg from "./Home_images/top2.jpeg"
 import "./HomeOffer.css"
-import  {Carousel} from "./HomeSlide"
+import  {CarouselPart} from "./HomeSlide"
 
 
 export const HomeOffer=()=>{
@@ -16,7 +16,7 @@ export const HomeOffer=()=>{
 return (
     <div>
 
-    <Carousel ></Carousel>
+    <CarouselPart ></CarouselPart>
 
         <div className="offerdiv">
             <img src={offerimg} alt=""   className="offerimg"></img>
