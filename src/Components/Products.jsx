@@ -73,7 +73,7 @@ const Products = ({ data }) => {
          const sorted = [...filteredData].sort((a, b) => b.price - a.price);
          setFilteredData(sorted);
       } else if (by === "Rating: High To Low") {
-         const sorted = [...filteredDatao].sort(
+         const sorted = [...filteredData].sort(
             (a, b) => b.rating.length - a.rating.length
          );
          setFilteredData(sorted);
