@@ -47,7 +47,6 @@ const Products = ({ data }) => {
                setFilteredData((arr) => [...arr, data]);
             });
          });
-      setBrands();
    };
 
    const setBrands = () => {
@@ -136,6 +135,9 @@ const Products = ({ data }) => {
                      width: "400px",
                      fontSize: "15rem",
                      margin: "auto",
+                     marginTop : "2%",
+                     marginBottom : "5%",
+                     color: "#FF3E6B"
                   }}
                />
             ) : (
@@ -148,7 +150,7 @@ const Products = ({ data }) => {
                   <div className="productContainer">
                      {filteredData.map((e, i) => {
                         return (
-                           <Card sx={{ maxWidth: 275 }}>
+                           <Card sx={{ maxWidth: 275 }} className="card">
                               <CardMedia
                                  component="img"
                                  // height="140"

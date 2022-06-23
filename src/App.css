@@ -23,3 +23,12 @@
   grid-gap: 0.8rem;
 }
 
+.card:hover {
+  transform: scale(1.04);
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.card {
+  max-height: 500px;
+}
